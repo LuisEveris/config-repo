@@ -1,0 +1,31 @@
+[{
+  "_id": 1,
+  "name": "ahorro",
+  "type": "pasivo",
+  "_class": "com.bootcamp.msproduct.entity.Product"
+},{
+  "_id": 2,
+  "name": "cuenta corriente",
+  "type": "pasivo",
+  "_class": "com.bootcamp.msproduct.entity.Product"
+},{
+  "_id": 3,
+  "name": "plazo fijo",
+  "type": "pasivo",
+  "_class": "com.bootcamp.msproduct.entity.Product"
+},{
+  "_id": 4,
+  "name": "personal",
+  "type": "activo",
+  "_class": "com.bootcamp.msproduct.entity.Product"
+},{
+  "_id": 5,
+  "name": "empresarial",
+  "type": "activo",
+  "_class": "com.bootcamp.msproduct.entity.Product"
+},{
+  "_id": 6,
+  "name": "tarjeta de credito personal o empresarial",
+  "type": "activo",
+  "_class": "com.bootcamp.msproduct.entity.Product"
+}]

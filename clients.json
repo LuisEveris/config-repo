@@ -1,0 +1,9 @@
+{
+  "id": 1,
+  "name": "Pedro Castillo",
+  "dni": 12345678,
+  "type": "personal",
+  "address": "Jr. las lomas 123",
+  "email": "pedro@castillo.com",
+  "phone": 987654321
+}
