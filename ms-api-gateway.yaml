@@ -2,8 +2,8 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: ms-products
-          uri: http://localhost:8001
+        - id: ms-product
+          uri: lb://ms-product
           predicates:
             - Path=/products/**
         - id: ms-client
