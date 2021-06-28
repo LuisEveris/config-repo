@@ -1,0 +1,49 @@
+spring:
+    cloud:
+        gateway:
+            routes:
+                - id: ms-product
+                  uri: http://localhost:8001
+                  predicates:
+                      - Path=/products/**
+                  filters:
+                      - name: CircuitBreaker
+                        args:
+                            name: ms-product
+                            fallbackuri: forward:/productServiceFallBack
+                - id: ms-client
+                  uri: http://localhost:8002
+                  predicates:
+                      - Path=/clients/**
+                  filters:
+                      - name: CircuitBreaker
+                        args:
+                            name: ms-client
+                            fallbackuri: forward:/clientServiceFallBack
+                - id: ms-sales
+                  uri: http://localhost:8003
+                  predicates:
+                      - Path=/sales/**
+                  filters:
+                      - name: CircuitBreaker
+                        args:
+                            name: ms-sales
+                            fallbackuri: forward:/salesServiceFallBack
+
+hystrix:
+    command:
+        fallbackcmd:
+            execution:
+                isolation:
+                    thread:
+                        timeoutInMilliseconds: 2000
+
+
+management:
+    endpoints:
+        web:
+            exposure:
+                include: "*"
+eureka:
+    instance:
+        instance-id: ${spring.application.name}:${server.port}
