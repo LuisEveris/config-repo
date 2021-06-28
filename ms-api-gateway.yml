@@ -2,7 +2,7 @@ spring:
     cloud:
         gateway:
             routes:
-                - id: MS-PRODUC
+                - id: MS-PRODUCT
                   uri: lb://MS-PRODUCT
                   predicates:
                       - Path=/products/**
@@ -12,7 +12,7 @@ spring:
                             name: ms-product
                             fallbackuri: forward:/productServiceFallBack
                 - id: ms-client
-                  uri: http://localhost:8002
+                  uri: lb://MS-CLIENT
                   predicates:
                       - Path=/clients/**
                   filters:
@@ -21,7 +21,7 @@ spring:
                             name: ms-client
                             fallbackuri: forward:/clientServiceFallBack
                 - id: ms-sales
-                  uri: http://localhost:8003
+                  uri: lb://MS-SALES
                   predicates:
                       - Path=/sales/**
                   filters:
