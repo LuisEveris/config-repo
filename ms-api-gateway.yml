@@ -6,37 +6,37 @@ spring:
                   uri: https://lel-ms-product.azurewebsites.net/products
                   predicates:
                       - Path=/products/**
-                  filters:
-                      - name: CircuitBreaker
-                        args:
-                            name: ms-product
-                            fallbackuri: forward:/productServiceFallBack
+#                  filters:
+#                      - name: CircuitBreaker
+#                        args:
+#                            name: ms-product
+#                            fallbackuri: forward:/productServiceFallBack
                 - id: ms-client
                   uri: https://lel-ms-client.azurewebsites.net/clients
                   predicates:
                       - Path=/clients/**
-                 filters:
-                      - name: CircuitBreaker
-                        args:
-                            name: ms-client
-                            fallbackuri: forward:/clientServiceFallBack
+#                 filters:
+#                      - name: CircuitBreaker
+#                        args:
+#                            name: ms-client
+#                            fallbackuri: forward:/clientServiceFallBack
                 - id: ms-sales
                   uri: https://lel-ms-sales.azurewebsites.net/sales
                   predicates:
                       - Path=/sales/**
-                  filters:
-                      - name: CircuitBreaker
-                        args:
-                            name: ms-sales
-                            fallbackuri: forward:/salesServiceFallBack
+#                  filters:
+#                      - name: CircuitBreaker
+#                        args:
+#                            name: ms-sales
+#                            fallbackuri: forward:/salesServiceFallBack
 
-hystrix:
-    command:
-        fallbackcmd:
-            execution:
-                isolation:
-                    thread:
-                        timeoutInMilliseconds: 20000
+#hystrix:
+#    command:
+#        fallbackcmd:
+#            execution:
+#                isolation:
+#                    thread:
+#                        timeoutInMilliseconds: 20000
 
 
 management:
