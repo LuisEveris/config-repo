@@ -1,0 +1,13 @@
+Config-server: https://lel-config-server.azurewebsites.net/ms-product/default
+
+Eureka server: https://lel-eureka-server.azurewebsites.net
+
+Api gateway: https://lel-bank.azurewebsites.net/clients
+	     https://lel-bank.azurewebsites.net/products
+	     https://lel-bank.azurewebsites.net/sales
+
+ms product:  http://lel-ms-product.azurewebsites.net/products
+
+ms clients:  https://lel-ms-client.azurewebsites.net/clients
+ 
+ms sales:   https://lel-ms-sales.azurewebsites.net/sales
