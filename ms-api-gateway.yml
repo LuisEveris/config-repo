@@ -24,6 +24,10 @@ spring:
                   uri: https://lel-ms-sales.azurewebsites.net/sales
                   predicates:
                       - Path=/sales/**
+                - id: ms-bootcoin
+                  uri: https://lel-ms-bootcoin.azurewebsites.net/bootcoin
+                  predicates:
+                      - Path=/bootcoin/**
 #                  filters:
 #                      - name: CircuitBreaker
 #                        args:
